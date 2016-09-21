@@ -10,6 +10,8 @@
         <item>@mipmap/nuxoll</item>
         <item>@mipmap/vegdahl</item>
         <item>@mipmap/paigepic</item>
+        <item>@mipmap/langleyicon</item>
+        <item>@mipmap/imperioe</item>
     </array>
 
     <string-array name="spinner_names">
@@ -17,6 +19,8 @@
         <item>Dr. Andrew Nuxoll</item>
         <item>Dr. Steven Vegdahl</item>
         <item>Paige McKinney</item>
+        <item>Langley Vogt</item>
+        <item>Eric Imperio</item>
     </string-array>
 
 </resources>
