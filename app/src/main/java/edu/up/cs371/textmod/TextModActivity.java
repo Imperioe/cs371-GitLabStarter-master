@@ -10,12 +10,15 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import java.util.ArrayList;
@@ -41,6 +44,19 @@ public class TextModActivity extends ActionBarActivity {
         // set instance variables for our widgets
         imageView = (ImageView)findViewById(R.id.imageView);
 
+        Button upperCase = (Button)findViewById(R.id.upperCase);
+        upperCase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(v.getId() == (R.id.upperCase)) {
+                    EditText edit = (EditText)findViewById(R.id.editText);
+                    Editable temp = edit.getText();
+                    String tempString = temp.toString();
+                    tempString = tempString.toUpperCase();
+                    edit.setText(tempString);
+                }
+            }
+        });
         // Set up the spinner so that it shows the names in the spinner array resources
         //
         // get spinner object
@@ -103,6 +119,7 @@ public class TextModActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     /**
      * class that handles our spinner's selection events
      */
@@ -127,5 +144,8 @@ public class TextModActivity extends ActionBarActivity {
         public void onNothingSelected(AdapterView<?> parentView) {
             // your code here
         }
+
+
     }
+
 }

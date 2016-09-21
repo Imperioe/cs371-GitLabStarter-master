@@ -80,10 +80,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/upper_button_text"
-            android:id="@+id/button6"
+            android:id="@+id/upperCase"
             android:textSize="@dimen/button_font_size"
             android:textColor="@color/button_text_color"
-            android:background="@color/button_color" />
+            android:background="@color/button_color"
+            android:clickable="true"
+            android:onClick="onClick" />
 
         <Space
             android:layout_width="0sp"
