@@ -97,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lower_button_text"
-            android:id="@+id/button7"
+            android:id="@+id/buttonLower"
             android:textSize="@dimen/button_font_size"
             android:textColor="@color/button_text_color"
             android:background="@color/button_color" />
@@ -111,10 +111,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/reverse_button_text"
-            android:id="@+id/button4"
+            android:id="@+id/reverseButton"
             android:textSize="@dimen/button_font_size"
             android:textColor="@color/button_text_color"
-            android:background="@color/button_color" />
+            android:background="@color/button_color"
+            android:clickable="true" />
 
         <Space
             android:layout_width="0sp"
@@ -125,7 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/copy_name_button_text"
-            android:id="@+id/button2"
+            android:id="@+id/buttonCopy"
             android:textSize="@dimen/button_font_size"
             android:textColor="@color/button_text_color"
             android:background="@color/button_color" />
