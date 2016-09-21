@@ -57,6 +57,18 @@ public class TextModActivity extends ActionBarActivity {
                 }
             }
         });
+        Button clear = (Button)findViewById(R.id.clearButton);
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (v.getId() == R.id.clearButton)
+                {
+                    //This will clear the text that is in the EditText box.
+                    EditText edit = (EditText)findViewById(R.id.editText);
+                    edit.setText("");
+                }
+            }
+        });
         // Set up the spinner so that it shows the names in the spinner array resources
         //
         // get spinner object
@@ -162,7 +174,6 @@ public class TextModActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
     /**
      * class that handles our spinner's selection events
      */
@@ -187,8 +198,5 @@ public class TextModActivity extends ActionBarActivity {
         public void onNothingSelected(AdapterView<?> parentView) {
             // your code here
         }
-
-
     }
-
 }
