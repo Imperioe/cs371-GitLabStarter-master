@@ -66,6 +66,7 @@ public class TextModActivity extends ActionBarActivity {
                     //This will clear the text that is in the EditText box.
                     EditText edit = (EditText)findViewById(R.id.editText);
                     edit.setText("");
+                    //
                 }
             }
         });
