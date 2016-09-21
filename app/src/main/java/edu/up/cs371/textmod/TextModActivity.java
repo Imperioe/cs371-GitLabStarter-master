@@ -22,6 +22,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class TextModActivity extends ActionBarActivity {
 
@@ -142,6 +143,23 @@ public class TextModActivity extends ActionBarActivity {
                     String text = editText.getText().toString();
                     text = text.toLowerCase();
                     editText.setText(text);
+                }
+            }
+        });
+
+        Button switchButton = (Button) findViewById(R.id.buttonSwitch);
+        switchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(view == findViewById(R.id.buttonSwitch)){
+                    EditText editText = (EditText) findViewById(R.id.editText);
+                    String text = editText.getText().toString();
+                    int len = text.length();
+                    Random rand = new Random();
+                    int i = rand.nextInt(len-1)+1;
+                    String beginSub = text.substring(0,i);
+                    String endSub = text.substring(i);
+                    editText.setText(endSub + beginSub);
                 }
             }
         });

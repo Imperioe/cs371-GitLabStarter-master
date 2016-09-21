@@ -7,4 +7,5 @@
     <string name="reverse_button_text">Reverse</string>
     <string name="copy_name_button_text">Copy Name</string>
     <string name="initial_text">Text goes here.</string>
+    <string name="switch_button_text">Switch</string>
 </resources>
