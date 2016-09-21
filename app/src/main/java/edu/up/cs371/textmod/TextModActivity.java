@@ -16,6 +16,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import java.util.ArrayList;
@@ -33,6 +35,7 @@ public class TextModActivity extends ActionBarActivity {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
 
         // perform superclass initialization; load the layout
         super.onCreate(savedInstanceState);
@@ -73,6 +76,22 @@ public class TextModActivity extends ActionBarActivity {
         // define a listener for the spinner
         spinner.setOnItemSelectedListener(new MySpinnerListener());
 
+        Button reverseTextButton = (Button)findViewById(R.id.reverseButton);
+        reverseTextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (v.getId() == R.id.reverseButton) {
+
+                    EditText editText = (EditText)findViewById(R.id.editText);
+                    String originalText = editText.getText().toString();
+
+                    originalText = new StringBuilder(originalText).reverse().toString();
+
+                    editText.setText(originalText);
+                }
+
+            }
+        });
     }
 
     /**
@@ -102,6 +121,7 @@ public class TextModActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 
     /**
      * class that handles our spinner's selection events
