@@ -9,6 +9,7 @@
         <item>@mipmap/kitten</item>
         <item>@mipmap/nuxoll</item>
         <item>@mipmap/vegdahl</item>
+        <item>@mipmap/langleyicon</item>
         <item>@mipmap/imperioe</item>
     </array>
 
@@ -16,6 +17,7 @@
         <item>Sleeping Kitten</item>
         <item>Dr. Andrew Nuxoll</item>
         <item>Dr. Steven Vegdahl</item>
+        <item>Langley Vogt</item>
         <item>Eric Imperio</item>
     </string-array>
 
