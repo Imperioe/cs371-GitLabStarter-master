@@ -16,6 +16,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import java.util.ArrayList;
@@ -73,6 +75,33 @@ public class TextModActivity extends ActionBarActivity {
         // define a listener for the spinner
         spinner.setOnItemSelectedListener(new MySpinnerListener());
 
+        //Copy Button set up and Click Listener
+        Button copyName = (Button) findViewById(R.id.buttonCopy);
+        copyName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(view == findViewById(R.id.buttonCopy)){
+                    Spinner spinner1 = (Spinner) findViewById(R.id.spinner);
+                    EditText editText = (EditText) findViewById(R.id.editText);
+                    String text = spinner1.getSelectedItem().toString();
+                    editText.append(text);
+                }
+            }
+        });
+
+        //Lowercase Button set up and Click Listener
+        Button lowercase = (Button) findViewById(R.id.buttonLower);
+        lowercase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(view == findViewById(R.id.buttonLower)){
+                    EditText editText = (EditText) findViewById(R.id.editText);
+                    String text = editText.getText().toString();
+                    text = text.toLowerCase();
+                    editText.setText(text);
+                }
+            }
+        });
     }
 
     /**
