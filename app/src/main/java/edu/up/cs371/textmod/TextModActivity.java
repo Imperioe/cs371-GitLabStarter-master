@@ -145,6 +145,23 @@ public class TextModActivity extends ActionBarActivity {
                 }
             }
         });
+
+        //Remove spaces in the text
+        Button noSpace = (Button) findViewById(R.id.no_space);
+        noSpace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(view == findViewById(R.id.no_space)){
+
+                    EditText editText = (EditText) findViewById(R.id.editText);
+                    String text = editText.getText().toString();
+                    text = text.replace(" ", "");
+
+                    editText.setText(text);
+                }
+            }
+        });
+
     }
 
     /**
