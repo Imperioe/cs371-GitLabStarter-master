@@ -145,6 +145,37 @@ public class TextModActivity extends ActionBarActivity {
                 }
             }
         });
+
+        Button alternate = (Button)findViewById(R.id.alternateButton);
+        alternate.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view)
+            {
+                if (view == findViewById(R.id.alternateButton))
+                {
+                    EditText edit2 = (EditText)findViewById(R.id.editText);
+                    Editable textE = edit2.getText();
+                    String text = textE.toString();
+                    //char[] textArr = text.toCharArray();
+                    char c;
+                    for (int i = 0; i < text.length(); i++)
+                    {
+                        if (i % 2 == 0)
+                        {
+                            c = Character.toUpperCase(text.charAt(i));
+                            text = text.replace(text.charAt(i), c);
+                        }
+                        else
+                        {
+                            c = Character.toLowerCase(text.charAt(i));
+                            text = text.replace(text.charAt(i), c);
+                        }
+                    }
+
+                    edit2.setText(text);
+
+                }
+            }
+        });
     }
 
     /**
