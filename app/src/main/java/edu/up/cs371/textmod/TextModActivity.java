@@ -57,6 +57,26 @@ public class TextModActivity extends ActionBarActivity {
                 }
             }
         });
+        Button rInsert = (Button)findViewById(R.id.randomInsert);
+        rInsert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(v.getId() == (R.id.randomInsert)) {
+                    EditText edit1 = (EditText)findViewById(R.id.editText);
+                    Editable temp1 = edit1.getText();
+                    String tempString = temp1.toString();
+                    String alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
+                    int aLength = alphabet.length();
+                    int randAlIndex = (int)(aLength * Math.random());
+                    int randIndex = (int)(tempString.length() * Math.random());
+                    String tempHalf = tempString.substring(0, randIndex );
+                    String tempHalf2 = tempString.substring(randIndex);
+                    char randChar = alphabet.charAt(randAlIndex);
+                    String newString = tempHalf + randChar + tempHalf2;
+                    edit1.setText(newString);
+                }
+            }
+        });
         Button clear = (Button)findViewById(R.id.clearButton);
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
