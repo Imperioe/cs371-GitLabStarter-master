@@ -196,6 +196,13 @@
 
     </LinearLayout>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Random Insert"
+        android:id="@+id/randomInsert"
+        android:clickable="true" />
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="0sp"
